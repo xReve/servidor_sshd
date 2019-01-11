@@ -14,7 +14,7 @@ El servidor SSHD s'anomena **sshd**
 **servidorldap:base** Servidor LDAP amb usuaris i groups.
 
 
-### EXECUCIO
+### EXECUCIÓ
 **SSHD**
 docker run --rm -it --privileged --name sshd -h sshd --network ldapnet serversshd:base
 

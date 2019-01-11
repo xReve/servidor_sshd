@@ -9,17 +9,17 @@ El servidor SSHD s'anomena **sshd**
 
 ### IMATGES
 
-**serversshd:base** Servidor SSHD (antigament era el HOST pam) que conte usuaris locals i autentica usuaris contra servidor LDAP.
+**eescriba/serversshd:base** Servidor SSHD (antigament era el HOST pam) que conte usuaris locals i autentica usuaris contra servidor LDAP.
 
-**servidorldap:base** Servidor LDAP amb usuaris i groups.
+**eescriba/servidorldap:base** Servidor LDAP amb usuaris i groups.
 
 
 ### EXECUCIÓ
 **SSHD**
-docker run --rm -it --privileged --name sshd -h sshd --network ldapnet serversshd:base
+docker run --rm -it --privileged --name sshd -h sshd --network ldapnet eescriba/serversshd:base
 
 **LDAP**
-docker run --name ldap -h ldap --network ldapnet -p 389:389 -d servidorldap:base 
+docker run --name ldap -h ldap --network ldapnet -p 389:389 -d eescriba/servidorldap:base 
 
 
 

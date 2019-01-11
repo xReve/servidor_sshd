@@ -7,22 +7,22 @@ CREACIO SERVIDOR LDAP + SSHD AMB DOCKER
 El servidor LDAP s'anomena **ldap**
 El servidor SSHD s'anomena **sshd**
 
-###SERVER
+### IMATGES
 
-x_definir
+**serversshd:base** Servidor SSHD (antigament era el HOST pam) que conte usuaris locals i autentica usuaris contra servidor LDAP.
 
-
-###CLIENT
-
-x_definir
+**servidorldap:base** Servidor LDAP amb usuaris i groups.
 
 
-###EXECUCIO
+### EXECUCIO
+**SSHD**
+docker run --rm -it --privileged --name sshd -h sshd --network ldapnet serversshd:base
 
-docker run --rm -it --privileged --name sshd -h sshd --network ldapnet -p 1022:22 serversshd:base
-
-
-
+**LDAP**
 docker run --name ldap -h ldap --network ldapnet -p 389:389 -d servidorldap:base 
+
+
+
+
 
 

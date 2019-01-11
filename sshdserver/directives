@@ -1,0 +1,8 @@
+# DIRECTRIVA AllowUsers Exemple:
+
+# Nomès es podran connectar via ssh els següents usuaris: (Per la resta d'usuaris la conexió serà rebutjada)
+
+# AllowUsers pere marta anna exam01
+
+
+

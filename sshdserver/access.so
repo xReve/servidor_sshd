@@ -1,0 +1,14 @@
+# EXEMPLES modul pam_access.so
+
+# Usuari anna te denegat l'access des de totes les entrades:
+
+# - : anna : ALL 
+
+# Usuaris examen{01..03} nomès podran connectar-se si provenen de les IP's corresponents.
+
+# + : exam01 exam02 exam03 : 192.168.0.10 192.168.0.11 192.168.0.12
+
+# Usuari pere nomes podra entrar si esta al host pc02 (el pc02 pertany en un domini qualsevol (cas virtual no aplicat))
+
+# + : pere : pc02
+
